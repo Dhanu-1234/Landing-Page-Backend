@@ -70,3 +70,5 @@ app.post('/technicians', async(request,response)=>{
     const dbResponse = appliance === "ALL" ? await db.all(requestQUery2): await db.all(requestQUery1);
     response.send(dbResponse);
 });
+
+module.exports = app;
