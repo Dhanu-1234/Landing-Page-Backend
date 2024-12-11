@@ -1,11 +1,13 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
+const cors = require('cors');
 
 const { open } = require("sqlite");
 const sqlite3 = require("sqlite3");
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 const dbPath = path.join(__dirname, "LandingPage.db");
 
